@@ -28,6 +28,7 @@
         <div class="col-12">
             <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
         </div>
+        
     </div>
     <div id="form-message" class="mt-3"></div>
 </form>

@@ -316,6 +316,7 @@
                     <h3 class="fw-bold">sandeepptpss@gmail.com</h3>
                     <hr class="w-100">
                     <p class="mb-2">Follow me:</p>
+                    
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>

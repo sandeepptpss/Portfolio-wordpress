@@ -251,7 +251,6 @@ function update_contact_message() {
     $email = sanitize_email($_POST['email']);
     $subject = sanitize_text_field($_POST['subject']);
     $message = sanitize_textarea_field($_POST['message']);
-
     $updated = $wpdb->update($table, [
         'name' => $name,
         'email' => $email,

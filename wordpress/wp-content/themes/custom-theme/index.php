@@ -13,30 +13,6 @@
 
 <!-- Header Start -->
 <?php include 'banner.php' ?>
-    <!-- Header End -->
-
-
-    <!-- Video Modal Start -->
-    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- 16:9 aspect ratio -->
-                    <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                            allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Video Modal End -->
-
-
     <!-- About Start -->
     <div class="container-xxl py-6" id="about">
         <div class="container">
@@ -127,7 +103,6 @@
                                     <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                         
                         </div>
                         <div class="col-md-6">
                             <div class="skill mb-4">
@@ -242,26 +217,15 @@
 <?php include 'testimonial.php'; ?>
     <!-- Testimonial End -->
 
-
     <!-- Contact Start -->
-<?php include 'contact-us';?>
+<?php include 'contact-us.php';?>
     <!-- Contact End -->
 
     <!-- Map Start -->
-    <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container-xxl pt-5 px-0">
-            <div class="bg-dark">
-                <iframe
-                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Tech%20Prastish%20Software%20solution+()&amp;output=embed"
-                frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
-                tabindex="0"></iframe>
-            </div>
-        </div>
-    </div>
+<?php include 'google-map-section.php';?>
     <!-- Map End -->
 
-
-    <?php
+<?php
 /**
  * Template Name:Home page
  */

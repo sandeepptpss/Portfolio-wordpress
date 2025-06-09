@@ -138,11 +138,10 @@ create_contact_messages_table();
 register_activation_hook(__FILE__, 'create_contact_messages_table');
 
 add_action('admin_menu', 'contact_messages_menu');
-
 function contact_messages_menu() {
     add_menu_page(
-        'Contact Messages',
-        'Contact Messages',
+        'Submission Data',
+        'Submission Data',
         'manage_options',
         'contact-messages',
         'display_contact_messages',
@@ -264,6 +263,98 @@ function update_contact_message() {
         wp_send_json(['success' => false, 'message' => 'Failed to update message.']);
     }
 }
+
+
+// Contact Info Section
+function custom_contact_customizer($wp_customize) {
+
+    $wp_customize->add_section('contact_info_section', array(
+        'title' => __('Contact Info'),
+        'priority' => 30,
+    ));
+
+    // Office Address
+    $wp_customize->add_setting('office_address', array('default' => '123 Street, New York, USA'));
+    $wp_customize->add_control('office_address', array(
+        'label' => __('Office Address'),
+        'section' => 'contact_info_section',
+        'type' => 'text',
+    ));
+
+    // Phone
+    $wp_customize->add_setting('phone_number', array('default' => '+012 345 6789'));
+    $wp_customize->add_control('phone_number', array(
+        'label' => __('Phone Number'),
+        'section' => 'contact_info_section',
+        'type' => 'text',
+    ));
+
+    // Email
+    $wp_customize->add_setting('email_address', array('default' => 'you@example.com'));
+    $wp_customize->add_control('email_address', array(
+        'label' => __('Email Address'),
+        'section' => 'contact_info_section',
+        'type' => 'email',
+    ));
+
+    // Social Media
+    $socials = ['twitter', 'facebook', 'youtube', 'linkedin'];
+    foreach ($socials as $social) {
+        $wp_customize->add_setting("social_{$social}", array('default' => '#'));
+        $wp_customize->add_control("social_{$social}", array(
+            'label' => ucfirst($social) . ' URL',
+            'section' => 'contact_info_section',
+            'type' => 'url',
+        ));
+    }
+}
+add_action('customize_register', 'custom_contact_customizer');
+
+function custom_google_map($wp_customize) {
+    $wp_customize->add_section('google_map_section', array(
+        'title'    => __('Google Map Embed'),
+        'priority' => 31,
+    ));
+
+    $wp_customize->add_setting('google_map', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_iframe', // Use custom sanitizer
+    ));
+
+    $wp_customize->add_control('google_map', array(
+        'label'    => __('Google Map Embed Code'),
+        'section'  => 'google_map_section',
+        'type'     => 'textarea',
+    ));
+}
+add_action('customize_register', 'custom_google_map');
+
+function sanitize_iframe($input) {
+    return wp_kses($input, array(
+        'iframe' => array(
+            'src'             => true,
+            'width'           => true,
+            'height'          => true,
+            'frameborder'     => true,
+            'style'           => true,
+            'allowfullscreen' => true,
+            'aria-hidden'     => true,
+            'tabindex'        => true,
+        )
+    ));
+}
+
+
+  // Allow SVG for admins only
+
+function enable_svg_upload_for_admin($mimes) {
+  
+    if (current_user_can('administrator')) {
+        $mimes['svg'] = 'image/svg+xml';
+    }
+    return $mimes;
+}
+add_filter('upload_mimes', 'enable_svg_upload_for_admin');
 
 
 ?>

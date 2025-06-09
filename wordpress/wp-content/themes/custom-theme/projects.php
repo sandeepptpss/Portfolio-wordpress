@@ -12,13 +12,14 @@
 
     <?php while( have_rows('my_project') ): the_row(); 
       $image = get_sub_field('project_image');
+      $product_link = get_sub_field('product_link');
         ?>
             <div class="col-lg-4 col-md-6 portfolio-item">
     <div class="portfolio-img rounded overflow-hidden">
          <img class="img-fluid" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
          <div class="portfolio-btn">
                             <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                            <a target="_blank" class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="<?php echo esc_url($product_link);?>"><i class="fa fa-link"></i></a>
                         </div>
                         </div>
 </div>

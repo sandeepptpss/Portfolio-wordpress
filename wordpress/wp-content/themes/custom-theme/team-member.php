@@ -5,7 +5,7 @@
                     <h1 class="display-5 mb-0">Team Members</h1>
                 </div>
                 <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="<?php echo home_url();?>">Contact Us</a>
+                    <a class="btn btn-primary py-3 px-5" href="#contact-me">Contact Us</a>
                 </div>
             </div>
             <div class="row g-4">

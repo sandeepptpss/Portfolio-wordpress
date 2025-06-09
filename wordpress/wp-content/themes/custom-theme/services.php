@@ -5,7 +5,7 @@
                     <h1 class="display-5 mb-0">My Services</h1>
                 </div>
                 <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="">Hire Me</a>
+                    <a class="btn btn-primary py-3 px-5" href="#contact-me">Hire Me</a>
                 </div>
             </div>
             <div class="row g-4">

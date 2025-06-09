@@ -298,7 +298,7 @@ function custom_contact_customizer($wp_customize) {
     ));
 
     // Social Media
-    $socials = ['twitter', 'facebook', 'youtube', 'linkedin'];
+    $socials = ['twitter', 'facebook', 'youtube', 'linkedin','instagram'];
     foreach ($socials as $social) {
         $wp_customize->add_setting("social_{$social}", array('default' => '#'));
         $wp_customize->add_control("social_{$social}", array(

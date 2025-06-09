@@ -21,29 +21,28 @@
     <?php $facebook = get_theme_mod('social_facebook'); ?>
     <?php $youtube = get_theme_mod('social_youtube'); ?>
     <?php $linkedin = get_theme_mod('social_linkedin'); ?>
-
+    <?php $instagram = get_theme_mod('social_instagram'); ?>
     <div class="d-flex pt-2">
         <?php if (!empty($twitter)) : ?>
             <a class="btn btn-square btn-primary me-2" href="<?php echo esc_url($twitter); ?>">
                 <i class="fab fa-twitter"></i>
             </a>
         <?php endif; ?>
-
-        <?php if (!empty($facebook)) : ?>
+            <a class="btn btn-square btn-primary me-2" href="<?php echo esc_url($instagram); ?>">
+                <i class="fab fa-instagram"></i>
+            </a>
             <a class="btn btn-square btn-primary me-2" href="<?php echo esc_url($facebook); ?>">
                 <i class="fab fa-facebook-f"></i>
             </a>
-        <?php endif; ?>
+
         <?php if (!empty($youtube)) : ?>
             <a class="btn btn-square btn-primary me-2" href="<?php echo esc_url($youtube); ?>">
                 <i class="fab fa-youtube"></i>
             </a>
         <?php endif; ?>
-        <?php if (!empty($linkedin)) : ?>
             <a class="btn btn-square btn-primary me-2" href="<?php echo esc_url($linkedin); ?>">
                 <i class="fab fa-linkedin-in"></i>
             </a>
-        <?php endif; ?>
     </div>
     </div>
     <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s" id="contact-me">

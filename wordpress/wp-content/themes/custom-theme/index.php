@@ -1,229 +1,46 @@
 <?php
 
-// echo get_template_directory_uri();
-//  bloginfo('template_directory');
-?>
+   // echo get_template_directory_uri();
+   //  bloginfo('template_directory');
+   ?>
 
 
 <?php
-/**
- * Template Name:Home page
- */
-  get_header(); ?>
+   /**
+    * Template Name:Home page
+    */
+     get_header(); ?>
 
 <!-- Header Start -->
 <?php include 'banner.php' ?>
-    <!-- About Start -->
-    <div class="container-xxl py-6" id="about">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center mb-5">
-                    <?php
-                    $skills_experience = get_field('skills_experience');?>
-                    <?php echo $skills_experience; ?>
-                    </div>
-                    <p class="mb-4">Bringing 5 years of hands-on experience in web design and development—delivering creative, user-focused, and results-driven solutions.</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Afordable Prices</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>High Quality Product</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>On Time Project Delivery</p>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="row g-3 mb-4">
-                        <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="<?php bloginfo('template_directory');?>/img/about-1.jpg" alt="">
-                        </div>
-                        <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="<?php bloginfo('template_directory');?>/img/about-2.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-3">
-                        <h5 class="border-end pe-3 me-3 mb-0">Happy Clients</h5>
-                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">100</h2>
-                    </div>
-                    <p class="mb-4">We value our clients' satisfaction, delivering quality service with true dedication and care.</p>
-                    <div class="d-flex align-items-center mb-3">
-                        <h5 class="border-end pe-3 me-3 mb-0">Projects Completed</h5>
-                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">100</h2>
-                    </div>
-                    <p class="mb-0">Successfully completed a wide range of projects with a focus on excellence, efficiency, and client goals.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
+<!-- About Start -->
+<?php include 'about-us.php'; ?>
+<!-- About End -->
 
 
-    <!-- Expertise Start -->
-    <div class="container-xxl py-6 pb-5" id="skill">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="display-5 mb-5">Skills & Experience</h1>
-                    <p class="mb-4">With a strong foundation in front-end and back-end technologies, I bring practical experience and proven expertise to every project—delivering efficient, high-quality web solutions.</p>
-                    <h3 class="mb-4">My Skills</h3>
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">HTML</h6>
-                                    <h6 class="font-weight-bold">90%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">CSS</h6>
-                                    <h6 class="font-weight-bold">70%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Shopify</h6>
-                                    <h6 class="font-weight-bold">90%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">PHP</h6>
-                                    <h6 class="font-weight-bold">70%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Javascript</h6>
-                                    <h6 class="font-weight-bold">70%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">jquery</h6>
-                                    <h6 class="font-weight-bold">90%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Node Js/React Js</h6>
-                                    <h6 class="font-weight-bold">80%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Wordpress</h6>
-                                    <h6 class="font-weight-bold">85%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
-                        <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
-                        </li>
-                        <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="row gy-5 gx-4">
-                                <div class="col-sm-6">
-                                    <h5>Web Developer</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2021 - 2025</p>
-                                    <h6 class="mb-0">Tech Prastish Software solutions</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>Web Designer</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2021 - 2025</p>
-                                    <h6 class="mb-0">Tech Prastish Software solutions</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-2" class="tab-pane fade show p-0">
-                            <div class="row gy-5 gx-4">
-                                <div class="col-sm-6">
-                                    <h5>10th</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2014</p>
-                                    <h6 class="mb-0">Govt High school</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>12th</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2016</p>
-                                    <h6 class="mb-0">Govt Senior secondary School</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>B-Tech(CSE)</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2016 - 2020</p>
-                                    <h6 class="mb-0">PTU</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Expertise End -->
-
-
-    <!-- Service Start -->
+<!-- Expertise Start -->
+<?php include 'skills-experience.php';?>
+<!-- Expertise End -->
+<!-- Service Start -->
 <?php include 'services.php'?>
-    <!-- Service End -->
-
-    <!-- Projects Start -->
-   <?php include 'projects.php'?>
-    <!-- Projects End -->
-
-    <!-- Team Start -->
-     <?php include 'team-member.php'?>
-    <!-- Team End -->
-
-
-    <!-- Testimonial Start -->
+<!-- Service End -->
+<!-- Projects Start -->
+<?php include 'projects.php'?>
+<!-- Projects End -->
+<!-- Team Start -->
+<?php include 'team-member.php'?>
+<!-- Team End -->
+<!-- Testimonial Start -->
 <?php include 'testimonial.php'; ?>
-    <!-- Testimonial End -->
-
-    <!-- Contact Start -->
+<!-- Testimonial End -->
+<!-- Contact Start -->
 <?php include 'contact-us.php';?>
-    <!-- Contact End -->
-
-    <!-- Map Start -->
+<!-- Contact End -->
+<!-- Map Start -->
 <?php include 'google-map-section.php';?>
-    <!-- Map End -->
+<!-- Map End -->
 
 <?php
-/**
- * Template Name:Home page
- */
-  get_footer(); ?>
+   /**
+    * Template Name:Home page
+*/ get_footer(); ?>
